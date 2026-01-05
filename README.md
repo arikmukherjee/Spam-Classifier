@@ -2,10 +2,6 @@
 
 ---
 
-### 📘 PHP Books (With Authors & Official / Free Links)
-
----
-
 ### 📗 PHP & MySQL Web Development
 **Authors:** Luke Welling & Laura Thomson  
 - Covers PHP, MySQL, and full stack web apps  
