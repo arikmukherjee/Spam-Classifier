@@ -1,116 +1,102 @@
-## 📚 PHP Books & Free Study Resources
+# 📧 Spam Classifier (TF-IDF + Naive Bayes)
+
+![Python](https://img.shields.io/badge/Python-3.13-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-1.4-orange.svg)
+![NLP](https://img.shields.io/badge/NLP-Text_Classification-yellow.svg)
+
+This project implements a simple **text classification pipeline** to detect whether a message is **spam** or **ham** (not spam).
+It uses **TF-IDF** for feature extraction and **Naive Bayes** as the classification model.
 
 ---
 
-### 📗 PHP & MySQL Web Development
-**Authors:** Luke Welling & Laura Thomson  
-- Covers PHP, MySQL, and full stack web apps  
-📖 **Preview (Google Books):**  
-👉 https://books.google.com/books?id=ZshFDwAAQBAJ  
-⚠️ *Full PDF not legally free*
+## 🚀 Features
+
+- Preprocessing of SMS text data
+- Train/test split with stratification
+- TF-IDF vectorization
+- Naive Bayes classification
+- Evaluation metrics (accuracy, precision, recall, F1)
+- Model persistence with `joblib`
 
 ---
 
-### 📘 Head First PHP & MySQL
-**Authors:** Lynn Beighley & Michael Morrison  
-- Beginner-friendly & visually rich  
-📖 **Preview (Google Books):**  
-👉 https://books.google.com/books?id=qcBUAgAAQBAJ  
-⚠️ *Full PDF not legally free*
+## 📂 Project Structure
+
+```
+spam-classifier/
+│── data/
+│   └── spam.csv         # dataset (SMS Spam Collection)
+│── assets/              # screenshots (results, structure)
+│── spam_classifier.py   # main pipeline
+│── requirements.txt     # dependencies
+│── README.md            # project documentation
+│── .gitignore
+```
 
 ---
 
-### 📕 PHP and MySQL for Dynamic Web Sites
-**Author:** Larry Ullman  
-- Clear explanations + examples for web dev beginners  
-📖 **Preview / Info:**  
-👉 https://books.google.com/books?id=kfC3DwAAQBAJ  
-⚠️ *Full PDF is not legally free*
+## 📊 Dataset
+
+We used the **[SMS Spam Collection Dataset](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset)** from Kaggle.
+
+- `label` → spam or ham
+- `text` → SMS message
 
 ---
 
-### 📙 Modern PHP
-**Author:** Josh Lockhart  
-- Covers modern practices; Composer, PSR, testing  
-📖 **Official Info:**  
-👉 https://www.oreilly.com/library/view/modern-php/9781491905162/  
-⚠️ *Full PDF not freely available legally*
+## ▶️ How to Run
+
+```bash
+# create virtual environment
+python3 -m venv .venv
+source .venv/bin/activate
+
+# install dependencies
+pip install -r requirements.txt
+
+# run training + evaluation
+python spam_classifier.py --data data/spam.csv
+```
+
+The script will print evaluation metrics and save the model (`model.joblib`).
 
 ---
 
-## 📥 Free PHP Tutorials & Study Resources
+## ✅ Results
 
-### 📖 Official / Open Tutorials
-- 🧠 **W3Schools – PHP Tutorial** (Interactive + examples)  
-👉 https://www.w3schools.com/php/
+```
+Accuracy: 0.9686
 
-- 📘 **PHP.net Manual (Official)** — complete language reference + examples  
-👉 https://www.php.net/manual/en/
+Classification report:
+              precision    recall  f1-score   support
+ham              0.97       1.00      0.98       966
+spam             1.00       0.77      0.87       149
+accuracy                             0.97      1115
+macro avg        0.98       0.88      0.92      1115
+weighted avg     0.97       0.97      0.97      1115
 
-- 📖 **Tutorial Republic – PHP Guide**  
-👉 https://www.tutorialrepublic.com/php-tutorial/
-
----
-
-### 🎓 Free Courses (Videos & Structured)
-
-- 🎥 **freeCodeCamp – PHP Full Course** (YouTube)  
-👉 https://www.youtube.com/watch?v=OK_JCtrrv-c
-
-- 📚 **Codecademy – Learn PHP (Free tier)**  
-👉 https://www.codecademy.com/learn/learn-php
-
-- 💻 **Udemy Free PHP Courses** *(varies by availability)*  
-👉 https://www.udemy.com/topic/php/free/
+Confusion matrix:
+[[966   0]
+ [ 35 114]]
+```
 
 ---
 
-### 📄 Free PDF/Notes (Legal / Community)
+## 📸 Screenshots
 
-- 📘 **PHP Notes for Professionals (GoalKicker)** — free downloadable PDF  
-👉 https://books.goalkicker.com/PHPBook/PHPNotesForProfessionals.pdf
+### Model Results
 
-- 📄 **PHP & MySQL Tutorial PDF**  
-👉 https://www.tutorialspoint.com/php/php_tutorial.pdf
+![Results](assets/results.png)
 
-- 📘 **PHP OOP Tutorial (PDF)**  
-👉 https://www.tutorialrepublic.com/php-tutorial/php-object-oriented-programming.php
+### Project Structure
 
----
-
-## 🧰 Additional PHP Resources
-
-- 🧠 **Stack Overflow (PHP tag)** — Ask questions, real solutions  
-👉 https://stackoverflow.com/questions/tagged/php
-
-- 🚀 **GitHub PHP Topics** — Community projects & libraries  
-👉 https://github.com/topics/php
-
-- 📦 **Packagist** — PHP package repository  
-👉 https://packagist.org/
+![Structure](assets/project-structure.png)
 
 ---
 
-## 📬 Contact Me
+## 🔮 Next Steps
 
-[![Email](https://img.shields.io/badge/Email-arikmukherjee3%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:arikmukherjee.ai@gmail.com)
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Arik%20Mukherjee-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/arik-mukherjee)
-[![GitHub](https://img.shields.io/badge/GitHub-arikmukherjee-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/arikmukherjee)
-[![YouTube](https://img.shields.io/badge/YouTube-Arik%20Mukherjee-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/@arikmukherjee)
-[![Instagram](https://img.shields.io/badge/Instagram-@arikmukherjee-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/arikmukherjee)
-
----
-
-## ⭐ Recommended Study Path (PHP)
-
-1. **Start with official PHP.net manual + W3Schools basics**
-2. **Follow free video course from freeCodeCamp**
-3. **Practice backend projects (CRUD, forms, sessions, APIs)**
-4. **Use PDFs/notes to reinforce concepts**
-5. **Explore frameworks (Laravel) once fundamentals are solid**
-
----
-
-✨ Thanks for visiting!  
-⭐ If you find these resources helpful, don’t forget to ⭐ **star this repo!**
+- Try `LinearSVC` and compare with Naive Bayes
+- Add hyperparameter tuning with `GridSearchCV`
+- Deploy as a minimal **FastAPI** endpoint for predictions
